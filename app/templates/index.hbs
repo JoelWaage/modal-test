@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>Test</h1>
+
+  <button {{action "toggleModal"}}>Toggle Modal</button>
+    {{#if isShowingModal}}
+      {{#modal-dialog close="toggleModal"
+                      targetAttachments="center"
+                      translucentOverlay=true}}
+        Word up.
+        <button {{action "toggleModal"}}>Close</button>
+      {{/modal-dialog}}
+    {{/if}}
+
+</div>
